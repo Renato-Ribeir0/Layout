@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+#menu-h ul {
+
+}
+#menu-h ul{
+    list-style:none ;
+    padding: 0;
+    background-color: rgb(40, 40, 233);
+
+}
+#menu-h ul li {
+    display: inline;
+
+}
+#menu-h ul li a {
+    color: #123;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .6s ;
+
+}
+#menu-h  li a:hover {
+    background-color: rgb;
+    color: rgb()
+}
+.bloc{
+    background-color: hsl(124, 46%, 86%);
+    margin: 15px ;
+    padding: 200px;
+    float: left;
+    height: 50px;
+    width: 30%;
+}
+.bloc1{
+    background-color: hsl(124, 46%, 86%);
+    margin: 15px;
+    padding: 200px;
+    float: right;
+    height: 50px;
+    width: 33%;
+}
+.bloc2{
+    background-color: hsl(124, 46%, 86%);
+    margin: 15px;
+    padding: 200px;
+    float: right;
+    height: 50px;
+    width: 30%;
+}
+.text {
+    margin: 0;
+    padding: 5px;
+  
+    
+}
+.all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+}
+  
+  .all-browsers > h1, .browser {
+    margin: 10px;
+    padding: 5px;
+}
+  
+  .browser {
+    background: white;
+}
+
+  .browser > h2, p {
+    margin: 4px;
+    font-size: 90%;
+}
+.all-brow {
+    margin: 1px;
+    padding: 1px;
+    text-align:left
+    
+}
+  
+  .all-brow > h1, .browserr {
+    margin: 10px;
+    padding: 5px;
+}
+  
+  .browserr {
+    margin: 1px;
+    padding: 1px;
+}
+
+  .browserr > h2, p {
+    margin: 4px;
+    font-size: 90%;
+}
+.text1{
+    text-align: end;
+}
+
+
