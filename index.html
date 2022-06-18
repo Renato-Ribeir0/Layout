@@ -1,290 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
 	<meta charset="UTF-8">
-	<meta name="descrição" content="Aula 9 - Links e imagens.">
-	<meta name="keywords" content="HTML,CSS, JavaScript">
-	<meta name="autor" content="Wilson Prates de Oliveira">
+	<meta name="descrição" content="PROJETO UCE BSI III - IFNMG ARINOS">
+	<meta name="keywords" content="Desenvolvimento WEB, UCE, BSI III">
+	<meta name="autor" content="BSI III - IFNMG ARINOS">
 	<meta name="viewport" content="width=device-width, initial-	scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="./css/styles.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/258ccdc165.js" crossorigin="anonymous"></script>
-	
-	<title>Aula 9: Links e imagens</title>
-	
-	<!-- css interno -->
+	<title>PROJETO UCE BSI III - IFNMG ARINOS</title>
+
 	<style type="text/css">
-		* {
-		box-sizing: border-box;
-		}
-		body {
-		  background-color: lightgray
-		}
-
-		header,footer {
-		  background-color: #bb0000;
-		  color: white;
-		  padding: 10px;
-		  clear: both;
-		}
-					
-		.topmenu {
-		  width: 100%;
-		  list-style: none;
-		  margin: 0 auto;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: rgb(196, 10, 4);
-
-		}
-
-		.topmenu li {
-			float: left;
-			display: flex;
-   			justify-content: center;
-			align-items: center;
-		}
-
-		.topmenu li a {
-		  display: inline-block;
-		  color: white;
-		  display: inline-block;
-		  padding: 20px;
-		  text-decoration: none;
-		}
-
-		.topmenu li a:hover {
-		  background-color: #222;
-		}
-
-		.topmenu li a.active {
-		  color: white;
-		  background-color: #4CAF50;
-		}
-
-		.column {
-		  float: left;
-		}
-
-		.clearfix::after {
-		  content: "";
-		  clear: both;
-		  display: table;
-		}
-
-		.sidemenu {
-		  width: 25%;
-		}
-		.content {
-			width: 74%;
-			margin-left: 1%;
-			/*border:2px solid green;*/ 
-		}
-
-		.sidemenu ul {
-		  list-style-type: none;
-		  margin-left: 10px;
-		  padding: 0;
-		}
-
-		.sidemenu li a {
-		  margin-bottom: 4px;
-		  display: block;
-		  padding: 6px;
-		  background-color: DarkGreen;
-		  text-decoration: none;
-		  color: white;
-		}
-
-		.sidemenu li a:hover {
-		  background-color: #555;
-		  color: white;
-		  font-size: 2em;
-		}
-
-		.sidemenu li a.active {
-		  background-color: #008CBA;
-		  color: white;
-		}
-		.img1{
-			width: 100%;
-			height: 300px;
-			object-fit: cover;
-			object-position: bottom;
-		}
 		.divmargem {
-    		color:black;
-    		padding: 50px;
-    		margin: 100px;
+			color: black;
+			padding: 50px;
+			margin: 100px;
 			font-size: 24px;
 			float: left;
 		}
+
 		.divmargem li {
-    		color:black;
-    		padding: 0;
-    		margin: 0;
+			color: black;
+			padding: 0;
+			margin: 0;
 			font-size: 16px;
 			list-style: none;
 		}
-		.criancas{
+
+		.criancas {
 			float: right;
 			width: 550px;
 		}
-		.img2{
-			background-color: pink ;
-			margin: auto;
-		}
-		.img3{
-			
-				margin: 15px;
-    			padding: 2px;
-    			float: left;
-    
-    			width: 33%;
-		}
-		
-		.img4{
-				margin: 15px;
-    			padding: 2px;
-    			float: right;
-    
-    			width: 33%;
-		}
-		
-		
-	</style>
-	<script>
-		function trocarTitulo(newTitulo)
-		{
-			document.getElementById('cb_conteudo').innerHTML = newTitulo;
-		}
-	
-	</script>
-</head>
-<body>
-	
-	<header class="clearfix">
-		<img style="float:right; width:200px;height:100px" src="./img/arinos_horizontal_jpg.jpg" alt="logo">
-		<img style="float:left; width:150px;height:100px" src="./img/icon.sis.jpg" alt="logo">
-		<h1 style="text-align:center;">Horo do código no IFNMG</h1>
-	</header>
 
-	<div class="column topmenu">
-	
-		<header><h3></h3></header>	
-		<ul>
-			<li >
-				<h4><a target="ifr_conteudo" href=""
-				onclick="trocarTitulo(this.innerHTML);">
-				Slides da aula ></i></a></h4>
-			</li>
-			<li>
-				<a target="ifr_conteudo" href="conteudo/links.html"
-				onclick="trocarTitulo(this.innerHTML);">Links</a>
-			</li>
-			<li>
-				<a href="conteudo/quem-quer-aprender.html">Vamos aprender ?</a>
-			</li>
-			<li>
-				<a href="conteudo/imagens.html">Imagens</a>
-			</li>
-			
-			<li>
-				<a href="conteudo/mapa-de-imagem.html">Mapa de Imagem</a>
-			</li>
-			<li>
-				<a href="conteudo/imagem-de-fundo.html">Imagem de fundo</a>
-			</li>
-			<li>
-				<a href="conteudo/picture.html">Picture</a>
-			</li>
-		</ul>
-		
-		<img class="img1" src="../aula9/img/navegando.jpeg" alt="programar">
+		.img3 {
+			margin: 15px;
+			padding: 2px;
+			float: left;
+			width: 33%;
+		}
+
+		.img4 {
+			margin: 15px;
+			padding: 2px;
+			float: right;
+			width: 33%;
+		}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<div class="linemenu-top">
+			<img class="img-logo" src="./img/logo_si.png" alt="BSI III">
+			<h1 style="text-align:center;">PROJETO UCE BSI III 2022 - IFNMG ARINOS</h1>
+			<img class="img-logo" src="./img/logo_if.png" alt="IFNMG">
+		</div>
+		<div class="linemenu-bottom">
+			<ul>
+				<li>
+					<a href="conteudo/quem-quer-aprender.html">Vamos aprender ?</a>
+				</li>
+				<li>
+					<a href="conteudo/imagens.html">Imagens</a>
+				</li>
+				<li>
+					<a href="conteudo/mapa-de-imagem.html">Mapa de Imagem</a>
+				</li>
+				<li>
+					<a href="conteudo/imagem-de-fundo.html">Imagem de fundo</a>
+				</li>
+				<li>
+					<a href="conteudo/picture.html">Picture</a>
+				</li>
+			</ul>
+			<img class="img-linemenu" src="img/navegando.jpeg" alt="Programando">
+		</div>
+	</header>
+	<section class="page">
+		<div class="column">
+			<img class="criancas" src="./img/telecto.webp">
+		</div>
+		<div class="column direction-column">
+			<h1>Em um futuro muito próximo cada indivíduo do planeta saberá, pelo menos, o básico de programação.</h1>
+			<p>Não será muito estranho se daqui a algum tempo os livros de códigos estiverem junto com os de geografia
+				ou história dentro das mochilas das crianças. Aprender algoritmos e linguagens de programação pode ser
+				decisivo na vida profissional, já que o mercado de trabalho cada vez mais necessita de gente que entenda
+				o assunto, mas é em outros aspectos os melhores benefícios.</p>
+		</div>
+	</section>
+	<article class="all-brow">
+		<h1>Estímulo do raciocínio lógico e da criatividade</h1>
+		<article class="browserr">
+			<h2>Tem que vir de dentro</h2>
+			<p>Não dá pra começar a programar com uma motivação fraca, tipo; “quero aprender porque deve ser legal”…
+				não serve! Tem que ser algo mais intenso!</p>
+		</article>
+		<article class="brow">
+			<h2>Programação ajuda a planejar e organizar ideias</h2>
+			<p>Programar e escrever se torna um processo similar quando os estudantes começam a trabalhar em um
+				projeto. Primeiro, é preciso pensar e planejar as diferentes funções e variações que serão
+				necessárias. Também, como essas funções vão trabalhar em harmonia para fazer o projeto funcionar.
+			</p>
+		</article>
+		<article class="brow">
+			<h2>Ajuda na organização</h2>
+			<p>Aprender programação incentiva os jovens a organizar os pensamentos e as ações que são exigidas para
+				solucionar os problemas e desafios dos projetos de criação, podendo ser um jogo ou uma aplicação.
+				Isso pode ter reflexo na organização de vários pontos da vida, como o planejamento de tarefas, os
+				estudos e outras atividades, além, claro, dos pensamentos e das ideias.</p>
+		</article>
+	</article>
+	</section>
+
+	<div>
+		<img src="../aula9/img/Tudo-Sobre-Linguagens-de-Programacao-Para-Criancas-2019.png" class="img3" alt="...">
+	</div>
+	<div>
+		<img src="./img/Tudo-Sobre-Linguagens-de-Programacao-Para-Criancas-2019.png" class="img4" alt="...">
+	</div>
+
+	<div class="bloc">
+
+		<p>
+			Renato
 
 	</div>
-	
-	
-	<div class="divmargem">
-		<img class="criancas" src="./img/telecto.webp" >
-		<h3>Em um futuro muito próximo cada indivíduo do planeta saberá, pelo menos, o básico de programação.</h3>
-	
-        <li>
-			<p>
-				Não será muito estranho se daqui a algum tempo os livros de códigos estiverem junto com os de geografia ou história dentro das mochilas das crianças. Aprender algoritmos e linguagens de programação pode ser decisivo na vida profissional, já que o mercado de trabalho cada vez mais necessita de gente que entenda o assunto, mas é em outros aspectos os melhores benefícios.
-			</p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-		</li>
-		<article class="all-brow">
-			<h1 >Estímulo do raciocínio lógico e da criatividade</h1>
-			<article class="browserr">
-			  <h2>Tem que vir de dentro</h2>
-			  <p>Não dá pra começar a programar com uma motivação fraca, tipo; “quero aprender porque deve ser legal”… não serve! Tem que ser algo mais intenso!</p>
-			</article>
-			<article class="brow">
-			  <h2>Programação ajuda a planejar e organizar ideias</h2>
-			  <p>Programar e escrever se torna um processo similar quando os estudantes começam a trabalhar em um projeto. Primeiro, é preciso pensar e planejar as diferentes funções e variações que serão necessárias. Também, como essas funções vão trabalhar em harmonia para fazer o projeto funcionar.</p>
-			</article>
-			<article class="brow">
-			  <h2>Ajuda na organização</h2>
-			  <p>Aprender programação incentiva os jovens a organizar os pensamentos e as ações que são exigidas para solucionar os problemas e desafios dos projetos de criação, podendo ser um jogo ou uma aplicação. Isso pode ter reflexo na organização de vários pontos da vida, como o planejamento de tarefas, os estudos e outras atividades, além, claro, dos pensamentos e das ideias.</p>
-			</article>
-		  </article>
-    </div>
+	<div class="bloc1">
+		<p>
+			Renato 1
+		</p>
+	</div>
+	<div class="bloc2">
+		<p>
+			Renato 2
+		</p>
+	</div>
 
-				<div>
-					<img  src="../aula9/img/Tudo-Sobre-Linguagens-de-Programacao-Para-Criancas-2019.png" class="img3" alt="...">
-				</div>
-				<div>
-					<img src="./img/Tudo-Sobre-Linguagens-de-Programacao-Para-Criancas-2019.png" class="img4" alt="...">
-				</div>
 
-			<div class="bloc" >
-				
-				<p >
-					Renato
-				
-			</div>
-			<div class="bloc1">
-				<p>
-					Renato 1
-				</p>
-			</div>
-			<div class="bloc2">
-				<p> 
-					Renato 2
-				</p>
-			</div>
-            
+	<article class="all-browsers">
+		<h1>Estímulo do raciocínio lógico e da criatividade</h1>
+		<article class="browser">
+			<h2>Tem que vir de dentro</h2>
+			<p>Não dá pra começar a programar com uma motivação fraca, tipo; “quero aprender porque deve ser legal”… não
+				serve! Tem que ser algo mais intenso!</p>
+		</article>
+		<article class="browser">
+			<h2>Programação ajuda a planejar e organizar ideias</h2>
+			<p>Programar e escrever se torna um processo similar quando os estudantes começam a trabalhar em um projeto.
+				Primeiro, é preciso pensar e planejar as diferentes funções e variações que serão necessárias. Também,
+				como essas funções vão trabalhar em harmonia para fazer o projeto funcionar.</p>
+		</article>
+		<article class="browser">
+			<h2>Ajuda na organização</h2>
+			<p>Aprender programação incentiva os jovens a organizar os pensamentos e as ações que são exigidas para
+				solucionar os problemas e desafios dos projetos de criação, podendo ser um jogo ou uma aplicação. Isso
+				pode ter reflexo na organização de vários pontos da vida, como o planejamento de tarefas, os estudos e
+				outras atividades, além, claro, dos pensamentos e das ideias.</p>
+		</article>
+	</article>
 
-			<article class="all-browsers">
-				<h1>Estímulo do raciocínio lógico e da criatividade</h1>
-				<article class="browser">
-				  <h2>Tem que vir de dentro</h2>
-				  <p>Não dá pra começar a programar com uma motivação fraca, tipo; “quero aprender porque deve ser legal”… não serve! Tem que ser algo mais intenso!</p>
-				</article>
-				<article class="browser">
-				  <h2>Programação ajuda a planejar e organizar ideias</h2>
-				  <p>Programar e escrever se torna um processo similar quando os estudantes começam a trabalhar em um projeto. Primeiro, é preciso pensar e planejar as diferentes funções e variações que serão necessárias. Também, como essas funções vão trabalhar em harmonia para fazer o projeto funcionar.</p>
-				</article>
-				<article class="browser">
-				  <h2>Ajuda na organização</h2>
-				  <p>Aprender programação incentiva os jovens a organizar os pensamentos e as ações que são exigidas para solucionar os problemas e desafios dos projetos de criação, podendo ser um jogo ou uma aplicação. Isso pode ter reflexo na organização de vários pontos da vida, como o planejamento de tarefas, os estudos e outras atividades, além, claro, dos pensamentos e das ideias.</p>
-				</article>
-			  </article>
-
-	<footer> <em>Rodapé </em></footer>	
+	<footer> <em>Rodapé </em></footer>
 </body>
+
 </html>
