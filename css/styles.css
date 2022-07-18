@@ -16,9 +16,9 @@
 
 .custom-background-img {
     position: relative;
-    background-image: url(../img/background-header.jpg);
+    background-image: url(../img/back.png);
     background-size: 100%;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     height: 350px;
 }
 
