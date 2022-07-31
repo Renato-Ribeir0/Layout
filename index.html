@@ -7,10 +7,11 @@
 	<meta name="keywords" content="Desenvolvimento WEB, UCE, BSI, Sistemas de Informação">
 	<meta name="autor" content="BSI III 2021 - IFNMG ARINOS">
 	<meta name="viewport" content="width=device-width, initial-	scale=1.0">
-	<link rel="shortcut icon" href="img/logo_si.png" >
+	<link rel="shortcut icon" href="img/logo_si.png">
 	<link rel="stylesheet" href="./css/styles.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://unpkg.com/scrollreveal"></script>
 	<title>PROJETO UCE BSI III - IFNMG ARINOS</title>
 </head>
 
@@ -22,94 +23,171 @@
 				<img class="custom-img-logo" src="./img/logo_si.png" alt="BSI III">
 			</a>
 			<ul class="nav col-12 col-md-auto mb-2 mb-md-0 justify-content-center">
-				<li><a href="#curso" class="nav-link px-2 link-dark">Sobre o curso</a></li>
-				<li><a href="#projeto" class="nav-link px-2 link-dark">Projeto</a></li>
-				<li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-				<li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-				<li><a href="#sobre" class="nav-link px-2 link-dark">Sobre</a></li>
+				<li><a href="#curso" class="nav-link px-2 link-dark">O Curso</a></li>
+				<li><a href="#projeto" class="nav-link px-2 link-dark">O Projeto</a></li>
+				<li><a href="#" class="nav-link px-2 link-dark">Jogos</a></li>
+				<li><a href="#faq" class="nav-link px-2 link-dark">FAQs</a></li>
+				<li><a href="#sobre" class="nav-link px-2 link-dark">Contato</a></li>
 			</ul>
 			<div class="col-md-3 text-end">
 				<a href="./src/sign-up.html" class="btn btn-primary">Cadastre-se</a>
 			</div>
 		</header>
-		<div class="p-4 p-md-5 mb-4 text-white rounded custom-background-img">
+		<div class="p-4 p-md-5 mb-4 text-black rounded custom-background-img revealBottom">
 			<div class="col-md-10 px-0">
-				<h1 class="display-5 fst-italic">HORA DO CÓDIGO - Turma BSI III 2020</h1>
-				<h4>Aprenda Sistemas de Informação. Mude o mundo.</h4>
-				<p class="fs-5 lead my-3">A Hora do Código é uma corrente mundial que quer mostrar a crianças, jovens, adultos, pais e professores que programar pode estar ao alcance de todos!</p>
+				<h1 class="display-5 fst-italic">VOCÊ ESTÁ NA <br><strong>HORA DO CÓDIGO</strong></h1>
+				<p class="fs-5 my-3">Uma corrente mundial que quer mostrar a crianças, jovens, adultos, pais e
+					professores que programar pode estar ao alcance de todos!</p>
 			</div>
 		</div>
-		<div class="p-4">
+		<div class="p-4 pb-mb-4">
 			<div class="row flex-lg-row-reverse align-items-center g-5" id="curso">
-				<div class="col-lg-6 mx-auto">
-					<h1 class="display-5 fw-bold">O FUTURO CHEGOU</h1>
-					<p class="fs-3">Entender de tecnologia vai ser importante para todo mundo. Isso não é o futuro, isso já faz parte do presente!</p>
+				<div class="col-lg-6 mx-auto revealRight">
+					<h1 class="display-5 fw-bold">O FUTURO É AGORA</h1>
+					<p class="fs-3">Aprenda sistemas de informação<br>Aprenda a programar<br>Mude o mundo!</p>
 				</div>
-				<div class="col-lg-6 d-flex justify-content-center align-items-center">
+				<div class="col-lg-6 d-flex justify-content-center align-items-center revealLeft">
 					<img src="./img/img-futuro.webp" class="custom-img" alt="O futuro da programação">
 				</div>
 			</div>
 		</div>
-		<div class="p-5">
-			<div class="container-fluid">
-				<h1 class="display-5 fw-bold">O projeto</h1>
-				<p class="fs-4">O projeto hora do código tem como objetivo iniciar a codificação básica e desenvolver a lógica de programação com vocês, falando sobre o passo a passo que irão utilizar para iniciar no mundo da programação e desenvolvimento, este que está com uma gigantesca falta de profissionais programadores, desenvolvedores, entre outras carreiras na área, e que a tendência é só aumentar cada dia mais. </p>
+		<div class="p-4">
+			<div class="container-fluid" id="projeto">
+				<h1 class="fw-bold">O que é <mark>Hora do Código</mark>?</h1>
+				<p class="fs-5">O projeto hora do código tem como objetivo iniciar a codificação básica e desenvolver a
+					lógica de programação com o estudante, falando sobre o passo a passo que será utilizado para iniciar
+					no
+					mundo da programação e desenvolvimento.
+				</p>
+				<blockquote class="blockquote">
+					<p class="mb-0">Entender de tecnologia vai ser importante para todo mundo. Isso não é o futuro, isso
+						já faz parte do presente!</p>
+				</blockquote>
 			</div>
 		</div>
-		<div class="p-5">
-			<div class="container-fluid" id="projeto">
-				<h1 class="display-5 fw-bold">Apresentação Do Curso Sistemas De Informação</h1>
-				<p class="fs-4" style="text-indent: 20px;">O curso de Sistemas de Informação forma profissionais capazes de administrar o fluxo de informações geradas e distribuídas por redes de computadores dentro e fora de uma organização.</p>
-				<p class="fs-4" style="text-indent: 20px;">
-					Em Sistemas de Informação você estuda como as informações e os dados são recebidos, manipulados e devolvidos através dos computadores e dos softwares. Aprendendo a criar e gerenciar programas, bem como modificá-los usando linguagens de programação, bibliotecas, frameworks e bancos de dados. No mercado de trabalho, o profissional pode trabalhar em empresas de Tecnologia da Informação ou qualquer outra que utilize banco de dados e redes.
+		<div class="p-4">
+			<div class="container-fluid" id="curso">
+				<h1 class="fw-bold">Seja um <mark>Bacharel</mark> em S.I.</h1>
+				<p class="fs-5">O curso de Sistemas de Informação forma profissionais capazes
+					de administrar o fluxo de informações geradas e distribuídas por redes de computadores dentro e fora
+					de uma organização.
+				</p>
+				<p class="fs-5">
+					Em Sistemas de Informação, o estudante aprende como as informações e os dados são recebidos,
+					manipulados e
+					devolvidos através dos dispositivos de acesso e dos softwares. Os estudantes aprendem a criar e
+					gerenciar programas, bem
+					como codificá-los usando linguagens de programação, bibliotecas, frameworks e bancos de dados. No
+					mercado de trabalho, o profissional pode trabalhar em empresas de <mark>Tecnologia da
+						Informação</mark> ou
+					qualquer outra que utilize banco de dados e redes.
+				</p>
+			</div>
+		</div>
+		<div class="p-4">
+			<div class="container-fluid" id="faq">
+				<div class="pricing-header px-3 py-3 mx-auto text-center">
+					<h1 class="display-4 fw-bold">Mão na Massa</h1>
+					<p class="fs-5">Programar e escrever se tornam processos similares quando os
+						estudantes começam a
+						trabalhar em um projeto, por isso, escolha uma das trilhas abaixo e treine suas habilidades!
 					</p>
-			</div>
-		</div>
-		<div class="p-5">
-			<div class="container-fluid" id="projeto">
-				<h1 class="display-5 fw-bold">Organizadores</h1>
-		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-			<div class="col">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Estímulo do raciocínio lógico e da criatividade</h5>
-						<p class="card-text">Não dá pra começar a programar com uma motivação fraca. Tem que ser algo mais intenso pois, a caminhada é longa e não é fácil.</p>
+				</div>
+				<div class="p-4 pb-mb-4 text-center">
+					<img src="./img/robot.png" class="rounded img-fluid" alt="Programando agora">
+				</div>
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-center">
+					<div class="col">
+						<div class="card revealWidget h-100 bg-info">
+							<div class="card-body">
+								<p class="card-text my-3">Se você quer entrar no universo da programação, a <strong>Hora
+										do
+										Código</strong> é uma ótima oportunidade. Organize sua agenda, separe uma hora
+									do seu dia e divirta-se!</p>
+							</div>
+						</div>
 					</div>
-					<img src="./img/img-workplace.jpg" class="card-img-bottom" alt="Motivação programação">
+					<div class="col">
+						<div class="card revealWidget h-100">
+							<div class="card-body">
+								<h5 class="card-title">Como posso participar?</h5>
+								<p class="card-text my-3">Não importa se você tem ou não experiência com programação!
+									Desafie-se escolhendo uma das trilhas abaixo e faça parte desse movimento
+									internacional.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card revealWidget h-100">
+							<div class="card-body">
+								<h5 class="card-title">O que devo esperar?</h5>
+								<p class="card-text my-3">Aprendendo fundamentos básicos da programação, você pode
+									desenvolver
+									o seu próprio app, uma página da web, softwares e o que mais quiser.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card revealWidget h-100">
+							<div class="card-body">
+								<h5 class="card-title">O que vou ganhar?</h5>
+								<p class="card-text  my-3"></p>
+								No final, após concluir com sucesso a trilha escolhida, todos saem dessa maratona com
+								muito mais
+								conhecimento! E ainda de quebra leva um certificado.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card revealWidget h-100">
+							<div class="card-body">
+								<h5 class="card-title">Quanto tempo leva?</h5>
+								<p class="card-text">
+									A ideia é que você programe por uma hora, para entender o básico da lógica de
+									programação e
+									se habituar com o sistema. Depois disso, é só continuar praticando!</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card revealWidget h-100">
+							<div class="card-body">
+								<h5 class="card-title">E porque aprender a programar?</h5>
+								<p class="card-text">
+									A programação é parceira na hora de desenvolver habilidades e representa uma ótima
+									oportunidade para trabalhar a lógica, a criatividade e até a resolução de problemas.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Estimula o pensamento organizacional</h5>
-						<p class="card-text">Programar e escrever se torna um processo similar quando os estudantes começam a
-							trabalhar em um projeto. Primeiro, é preciso pensar e planejar as diferentes funções e variações que serão
-							necessárias, e como essas funções vão trabalhar em harmonia para fazer o projeto funcionar.
-						</p>
-					</div>
-					<img src="./img/img-workplace.jpg" class="card-img-bottom" alt="Organização programação">
+		</div>
+		<div class="p-4 pb-mb-4">
+			<div class="row flex-lg-row-reverse align-items-center g-5" id="curso">
+				<div class="col-lg-6 mx-auto">
+					<h1 class="fw-bold">Aqui mais <mark>1</mark> motivo para aprender</h1>
+					<p class="fs-5 my-3">Estudo da Brasscom aponta demanda de 797 mil profissionais de
+						tecnologia até 2025!
+						Com apenas 53 mil pessoas formadas por ano em cursos de perfil tecnológico e uma
+						demanda média anual de 159 mil profissionais de Tecnologia da Informação e
+						Comunicação, o Brasil tem um grande desafio pela frente.</p>
+				</div>
+				<div class="col-lg-6 d-flex justify-content-center align-items-center revealLeft">
+					<img src="./img/demanda.jpg" class="custom-img" alt="Demanda de profissionais">
 				</div>
 			</div>
-			<div class="col">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Estimulo ao planejamento e organização de ideias</h5>
-						<p class="card-text">Aprender programação incentiva os jovens a organizar os pensamentos e as
-							ações que são exigidas para solucionar os problemas e desafios dos projetos de criação.
-							Isso pode ter reflexo na organização de vários pontos da vida, como o planejamento de
-							tarefas, os estudos e outras atividades, além, claro, dos pensamentos e das ideias.</p>
-					</div>
-					<img src="./img/img-workplace.jpg" class="card-img-bottom" alt="Organização programação">
-				</div>
-			</div>
-		</div>
-		</div>
 		</div>
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" id="sobre">
-			<p class="mb-0 text-muted">© 2022 IFNMG Arinos - BSI III</p>
-			<a href="/" class="d-flex align-items-center justify-content-center">
-				<img src="./img/logo_if_2.png" class="custom-img-logo" alt="IFNMG Arinos">
-			</a>
+			<ul class="d-flex justify-content-start align-items-center nav list-unstyled ">
+				<li><a href="/" class="d-flex align-items-center justify-content-center">
+						<img src="./img/logo_if_2.png" class="custom-img-logo" alt="IFNMG Arinos">
+					</a></li>
+				<li class="ms-3">
+					<p class="mb-0 text-muted">© 2022 IFNMG Arinos - BSI III</p>
+				</li>
+			</ul>
 			<ul class="d-flex justify-content-end nav list-unstyled ">
 				<li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-twitter"></i></a></li>
 				<li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram"></i></a></li>
@@ -124,6 +202,33 @@
 			</footer>
 		-->
 	</div>
+	<script>
+		window.onload = () => {
+			const scrollReveal = ScrollReveal({ reset: true })
+			scrollReveal.reveal('.revealRight', {
+				origin: 'right',
+				distance: '15%',
+				duration: 1000,
+				reset: false
+			});
+			scrollReveal.reveal('.revealLeft', {
+				origin: 'left',
+				distance: '15%',
+				duration: 1000,
+				reset: false
+			});
+			scrollReveal.reveal('.revealBottom', {
+				origin: 'bottom',
+				distance: '15%',
+				duration: 1000,
+				reset: false
+			});
+			scrollReveal.reveal('.revealWidget', {
+				interval: 200,
+				reset: false
+			});
+		};
+	</script>
 </body>
 
 </html>
