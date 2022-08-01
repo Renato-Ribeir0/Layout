@@ -1,3 +1,12 @@
+const alterInputs = (method) => {
+    const inputs = document.querySelectorAll('[data-input-edit="input"]');
+    if (method === 'disabled') {
+        [...inputs].map(element => element.setAttribute('disabled', true));
+    } else {
+        [...inputs].map(element => element.removeAttribute('disabled'));
+    }
+}
+
 const alterAlert = (nameClass, text) => {
     const alert = document.getElementById('alert');
     alert.classList.remove('alert-primary');
@@ -18,10 +27,9 @@ const handleErrorArray = (errorList) => {
 }
 
 function newUser(event) {
-    const inputs = document.querySelectorAll('[data-input-edit="input"]');
-    [...inputs].map(element => element.setAttribute('disabled', true));
     const helps = document.querySelectorAll('[data-input-edit="help"]');
     [...helps].map(element => element.innerHTML = '');
+    alterInputs('disabled');
     const nome = event.target[0].value;
     const sobrenome = event.target[1].value;
     const body = {
@@ -34,7 +42,6 @@ function newUser(event) {
     };
     alterAlert('alert-primary', 'Aguarde, cadastrando...');
     fetch('https://bsi-cadastro-usuarios.herokuapp.com/user', {
-        mode:'no-cors',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -45,19 +52,24 @@ function newUser(event) {
             const responseJson = await response.json();
             if (response.status === 200) {
                 alterAlert('alert-primary', 'Cadastro efetuado! Obrigado por participar!');
-                setTimeout(() => window.history.back(), 1500);
+                setTimeout(() => window.history.back(), 2500);
             } else {
-                [...inputs].map(element => element.removeAttribute('disabled'));
                 const { error } = responseJson;
-                if (Array.isArray(error)) {
-                    alterAlert('alert-danger', 'Houve um erro durante o cadastro, confira os campos digitados');
-                    handleErrorArray(error);
+                if (error) {
+                    alterInputs('enabled');
+                    if (Array.isArray(error)) {
+                        alterAlert('alert-danger', 'Houve um erro durante o cadastro, confira os campos digitados');
+                        handleErrorArray(error);
+                    } else {
+                        alterAlert('alert-danger', error);
+                    }
                 } else {
-                    alterAlert('alert-danger', error);
+                    throw new Error(String(error));
                 }
             }
         })
-        .catch((error)=> {
-            alterAlert('alert-danger', 'Ops! Tivemos um erro, tente novamente mais tarde');
+        .catch((error) => {
+            alterInputs('enabled');
+            alterAlert('alert-danger', `Ops! Tivemos um erro, tente novamente mais tarde. ${error.message}`);
         })
 }

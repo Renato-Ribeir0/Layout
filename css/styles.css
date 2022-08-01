@@ -49,12 +49,12 @@
     visibility: hidden;
 }
 
+.container-fluid a {
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .custom-background-img {
         height: auto;
-    }
-
-    .custom-background-img::before {
-        
     }
 }
