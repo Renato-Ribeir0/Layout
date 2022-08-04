@@ -2,18 +2,16 @@
 <html lang="pt-br">
 
 <head>
-  <title>PopColor + v1.0: jogo de lógica para quem gosta de pensar</title>
-  <meta name="author" content="Gabriel Barros | www.gabrielbarros.com.br" />
-  <meta name="copyright" content="@ 2009 by Gabriel Barros" />
-
+  <meta charset="UTF-8">
+  <meta name="descrição" content="PROJETO UCE BSI III - IFNMG ARINOS">
+  <meta name="keywords" content="Desenvolvimento WEB, UCE, BSI, Sistemas de Informação">
+  <meta name="autor" content="BSI III 2021 - IFNMG ARINOS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/logo_si.png">
+  <title>Advinhação das Cores</title>
   <style type="text/css">
-    /* Estilos da p�gina */
     * {
       font: 12px "Segoe UI", Tahoma, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #FFFFEF
     }
 
     select {
@@ -23,7 +21,6 @@
     .titulo {
       font: small-caps 25px Tahoma, sans-serif;
       color: #255681;
-      background-color: #EFEFEF
     }
 
     .vermelho {
@@ -52,7 +49,7 @@
   </style>
 
   <script type="text/javascript">
-    cor = new Array();     // Gama de cores dispon�veis:
+    cor = new Array();     // Gama de cores disponíveis:
     cor[0] = "#FF0000";    // Vermelho
     cor[1] = "#006600";    // Verde
     cor[2] = "#0000FF";    // Azul
@@ -60,34 +57,34 @@
     cor[4] = "#FF9900";    // Laranja
     cor[5] = "#000000";    // Preto
 
-    nivel = 1;       // N�vel padr�o inicial: f�cil 
-    Pensar();        // Ao iniciar o jogo, o PC j� deve "pensar" em uma combina��o
-    partidas = 1;    // N�mero de partida inicial
+    nivel = 1;       // Nível padrão inicial: fácil 
+    Pensar();        // Ao iniciar o jogo, o PC já deve "pensar" em uma combinação
+    partidas = 1;    // Número de partida inicial
 
-    limite = new Array();   // M�ximo de tentativas at� acertar a combina��o:
-    limite[1] = 10;         // 10 chances no n�vel f�cil
-    limite[2] = 12;         // 12 chances no n�vel m�dio
-    limite[3] = 14;         // 14 chances no n�vel dif�cil
+    limite = new Array();   // Máximo de tentativas até acertar a combinação:
+    limite[1] = 10;         // 10 chances no nível fácil
+    limite[2] = 12;         // 12 chances no nível médio
+    limite[3] = 14;         // 14 chances no nível difícil
 
 
     /****************************************************************
-    *  No n�vel f�cil (1), pode-se criar 256 combina��es de cores
-    *  No n�vel m�dio (2), pode-se criar 625 combina��es de cores
-    *  No n�vel dif�cil (3), pode-se criar 1296 combina��es de cores
+    *  No nível fácil (1), pode-se criar 256 combinações de cores
+    *  No nível médio (2), pode-se criar 625 combinaçõees de cores
+    *  No nível difícil (3), pode-se criar 1296 combinações de cores
     *****************************************************************/
 
 
     function Pensar() {
-      indice = nivel * 1 + 2;                            // Atribui 4 cores para o n�vel 1, 5 cores para o 2 e 6 para o n�vel 3
-      bloco1 = cor[Math.round(Math.random() * indice)];  // F�rmula que calcula a cor de cada bloco
+      indice = nivel * 1 + 2;                            // Atribui 4 cores para o nível 1, 5 cores para o 2 e 6 para o nível 3
+      bloco1 = cor[Math.round(Math.random() * indice)];  // Fórmula que calcula a cor de cada bloco
       bloco2 = cor[Math.round(Math.random() * indice)];
       bloco3 = cor[Math.round(Math.random() * indice)];
       bloco4 = cor[Math.round(Math.random() * indice)];
     }
 
     function Jogar() {
-      nivel = document.jogo.nivel.value;   // Atualiza n�vel: isto evita bug
-      erro = 0;                            // Zera n�mero de erros, pois uma nova partida � iniciada
+      nivel = document.jogo.nivel.value;   // Atualiza nível: isto evita bug
+      erro = 0;                            // Zera número de erros, pois uma nova partida é iniciada
 
       var primeiro = document.getElementsByTagName("select")[4 * nivel - 3].value;   // Primeiro bloco escolhido
       var segundo = document.getElementsByTagName("select")[4 * nivel - 2].value;    // Segundo bloco escolhido
@@ -95,7 +92,7 @@
       var quarto = document.getElementsByTagName("select")[4 * nivel].value;         // Quarto bloco escolhido
 
 
-      // Valida��o: se o usu�rio n�o escolheu a cor, � alertado sobre o fato:
+      // Validação: se o usuário não escolheu a cor, é alertado sobre o fato:
       if (primeiro == "-") {
         alert("Selecione a cor do primeiro bloco");
         document.getElementsByTagName("select")[4 * nivel - 3].focus();
@@ -117,10 +114,10 @@
         return false;
       }
 
-      // Escreve sequ�ncia do usu�rio:
+      // Escreve sequência do usuário:
       document.getElementById("status").innerHTML += "<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + primeiro + "'></button>&nbsp;&nbsp;<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + segundo + "'></button>&nbsp;&nbsp;<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + terceiro + "'></button>&nbsp;&nbsp;<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + quarto + "'></button>&nbsp;&nbsp;&nbsp;&nbsp;";
 
-      // Calcula n�mero de erros pela compara��o entre os blocos do usu�rio e do PC:
+      // Calcula número de erros pela comparação entre os blocos do usuário e do PC:
       if (primeiro != bloco1) {
         erro++;
       }
@@ -136,28 +133,28 @@
 
       chances = limite[nivel] - partidas;    // Chances que ainda restam para o fim do jogo
 
-      // Calcular n�mero de erros do jogador por partida:
+      // Calcular número de erros do jogador por partida:
 
 
-      // CASO 1: Se n�o errou nenhum bloco em qualquer partida, exceto a primeira:
+      // CASO 1: Se não errou nenhum bloco em qualquer partida, exceto a primeira:
       if (erro == 0 && partidas != 1) {
         document.getElementById("status").innerHTML += "<i>ACERTOU em " + partidas + " partidas!</i>";
         HabilitarBotoes(false);
-        alert("Parab�ns! Tente novamente!")
+        alert("Parabéns! Tente novamente!")
       }
 
       /*
-      *  CASO 2: Se n�o errou nenhum bloco na primeira 1, ent�o acertou com exatamente uma partida!
-      *  A chance disso ocorrer � muito pequena:
-      *  N�vel f�cil: 0,39%
-      *  N�vel m�dio: 0,16%
-      *  N�vel dif�cil: 0,078%
+      *  CASO 2: Se não errou nenhum bloco na primeira 1, então acertou com exatamente uma partida!
+      *  A chance disso ocorrer é muito pequena:
+      *  Nível fácil: 0,39%
+      *  Nível médio: 0,16%
+      *  Nível difícil: 0,078%
       */
 
       else if (erro == 0 && partidas == 1) {
         document.getElementById("status").innerHTML += "<i>ACERTOU em apenas 1 partida!\nIsso é pura sorte!</i>";
         HabilitarBotoes(false);
-        alert("Parab�ns! Continue assim!")
+        alert("Parabéns! Continue assim!")
       }
 
       // CASO 3: Apenas 1 bloco errado. Escrever no singular.
@@ -170,7 +167,7 @@
         document.getElementById("status").innerHTML += erro + " erros. Chances: " + chances + "<br /><br />";
       }
 
-      Rolar();  // Mostrar o �ltimo resultado
+      Rolar();  // Mostrar o último resultado
 
       if (partidas == limite[nivel] && erro != 0) {
         // Chances esgotadas, game over!          
@@ -178,13 +175,13 @@
         alert("Suas tentativas se esgotaram. Fim de jogo!");
         return SequenciaCorreta();   // Mostra qual era a resposta correta
       }
-      partidas++;   // Ainda n�o acertou, assim soma o n�mero de partidas jogadas
+      partidas++;   // Ainda não acertou, assim soma o número de partidas jogadas
     }
 
     function Desistir() {
       confirma = window.confirm("Tem certeza?");
       if (confirma) {
-        SequenciaCorreta();   // Escreve a combina��o secreta, se o usu�rio confirmar a desist�ncia
+        SequenciaCorreta();   // Escreve a combinaçõo secreta, se o usuário confirmar a desistência
       }
       else {
         return false;
@@ -192,15 +189,15 @@
     }
 
     function NovaPartida() {
-      HabilitarBotoes(true);                              // Reabilita os bot�es OK e Desistir
-      partidas = 0;                                       // Zera n�mero de partidas jogadas anteriormente
-      Pensar();                                           // Calcula nova combina��o
+      HabilitarBotoes(true);                              // Reabilita os botões OK e Desistir
+      partidas = 0;                                       // Zera número de partidas jogadas anteriormente
+      Pensar();                                           // Calcula nova combinações
       Jogar();                                            // Inicia nova partida
       document.getElementById("status").innerHTML = "";   // Apaga o campo com o jogo anterior
     }
 
     function ConfirmarNovaPartida() {
-      confirma = window.confirm("Começar novo jogo?");    // Veririca se o bot�o n�o foi apertado sem querer
+      confirma = window.confirm("Começar novo jogo?");    // Veririca se o botõo não foi apertado sem querer
       if (confirma) {                                     // Se confirmar, inicia nova partida
         NovaPartida();
       }
@@ -209,14 +206,14 @@
       }
     }
 
-    function SequenciaCorreta() {      // Escreve a resposta certa em caso de desist�ncia ou game over
+    function SequenciaCorreta() {      // Escreve a resposta certa em caso de desistência ou game over
       document.getElementById("status").innerHTML += "<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + bloco1 + "'></button>&nbsp;&nbsp;<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + bloco2 + "'></button>&nbsp;&nbsp;<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + bloco3 + "'></button>&nbsp;&nbsp;<button disabled='disabled' style='border: outset 4px #ABABAB; width: 20px; height: 20px; background-color: " + bloco4 + "'></button>&nbsp;&nbsp;&nbsp;&nbsp;<i>Esta era a sequência correta</i>";
-      HabilitarBotoes(false);        // Desabilita os bot�es OK e Desistir, pois o jogo acabou
+      HabilitarBotoes(false);        // Desabilita os botões OK e Desistir, pois o jogo acabou
       Rolar();
     }
 
     function MudarNivel() {
-      nivel = document.jogo.nivel.value;              // Atualiza n�vel
+      nivel = document.jogo.nivel.value;              // Atualiza nível
 
       if (nivel == 1) {
         document.getElementById("facil").style.display = "inline";    // Atualiza campos <select>, com as novas cores
@@ -234,38 +231,36 @@
         document.getElementById("dificil").style.display = "inline";
       }
 
-      n = new Array();   // N�veis de dificuldade dispon�veis
+      n = new Array();   // Níveis de dificuldade disponíveis
       n[1] = "fácil";
       n[2] = "médio";
       n[3] = "difícil";
 
       alert("O nível foi alterado para " + n[nivel]);
-      NovaPartida();     // Como o n�vel foi alterado, inicia nova partida
-      partidas = 1;      // Evita bug ao mudar de n�vel, quanto ao n�mero de chances/partidas
+      NovaPartida();     // Como o nível foi alterado, inicia nova partida
+      partidas = 1;      // Evita bug ao mudar de nível, quanto ao número de chances/partidas
     }
 
     function HabilitarBotoes(r) {
       if (r) {
-        document.jogo.ok.disabled = false;              // Reabilita bot�o OK, pois o jogo j� acabou
-        document.jogo.desistir.disabled = false;        // Reabilita bot�o Desistir, pois o jogo j� acabou 
+        document.jogo.ok.disabled = false;              // Reabilita botão OK, pois o jogo já acabou
+        document.jogo.desistir.disabled = false;        // Reabilita botão Desistir, pois o jogo já acabou 
       }
       else {
-        document.jogo.ok.disabled = "disabled";         // Desabilita bot�o OK, pois o jogo j� acabou
-        document.jogo.desistir.disabled = "disabled";   // Desabilita bot�o Desistir, pois o jogo j� acabou
+        document.jogo.ok.disabled = "disabled";         // Desabilita botão OK, pois o jogo já acabou
+        document.jogo.desistir.disabled = "disabled";   // Desabilita botão Desistir, pois o jogo já acabou
       }
     }
 
     function Rolar() {
       document.getElementById("status").scrollTop = 1000000;
     }
-
-      //-->
   </script>
 </head>
 
 <body onload="document.getElementsByTagName('select')[0].value = '1'">
-  <!-- O valor do atributo onload evita bug ao recarregar a p�gina no meio da execu��o do jogo -->
-  <span class="titulo">PopColor+ v1.0 - Jogo de lógica</span><br /><br />
+  <!-- O valor do atributo onload evita bug ao recarregar a página no meio da execução do jogo -->
+  <span class="titulo">PopColor - Jogo de lógica</span><br /><br />
 
   <form name="jogo" action="#">
     <span class="vermelho">Nível de dificuldade:</span>
@@ -276,7 +271,7 @@
     </select><br /><br />
 
     <span id="facil">
-      <!-- Bloco de op��es do n�vel F�cil -->
+
       <select name="primeiro">
         <option value="-">--
         <option value="#FF0000" class="vermelho">Vermelho</option>
@@ -311,7 +306,7 @@
     </span>
 
     <span id="medio" style="display: none">
-      <!-- Bloco de op��es do n�vel M�dio -->
+      
       <select name="primeiro">
         <option value="-">--
         <option value="#FF0000" class="vermelho">Vermelho</option>
@@ -350,7 +345,7 @@
     </span>
 
     <span id="dificil" style="display: none">
-      <!-- Bloco de op��es do n�vel Dif�cil -->
+      
       <select name="primeiro">
         <option value="-">--
         <option value="#FF0000" class="vermelho">Vermelho</option>
